@@ -1,0 +1,145 @@
+2012-08-02 v1.0.1
+-----------------
+
+* Reindex task can reindex multiple types at once
+
+2012-06-15 v1.0.0
+-----------------
+
+* Added ability to select multiple types to search on for a single search 
+  page. Also, this is the first release for ss3!
+
+2012-05-18 v0.9.0
+-----------------
+
+* Added ability to set a listing template for the result items to be displayed
+  within if the Listing Page module is installed
+
+
+2012-05-14 v0.8.1
+-----------------
+
+* Fixed a bug in reading the log file for locally started solr instances
+
+2012-04-04 v0.8.0
+-----------------
+
+* Results can now be cached if a SS_Cache object is set as the cache
+  property for the SolrSearchService. This will return results even if
+  the solr server is unable to be contacted
+
+2012-03-23 v0.7.1
+-----------------
+
+* Use the SolrTypeConfiguration in the list of types a page can search
+  on
+
+
+2012-01-27 v0.7.0
+-----------------
+
+* Added ability to index and search arbitrary non-DataObject content
+
+2011-12-08 v0.6.2
+-----------------
+
+* Added a unique ID when starting solr so the correct one is identified when
+  looking for the existing instance
+* CONFIG Allow developers to select where the data dir is placed
+
+2011-12-06 v0.6.0
+-----------------
+
+* FEATURE Added functionality that allows the start and stop of the bundled 
+  solr jetty servlet container file from within the CMS, allowing ADMIN users 
+  to start/stop Solr directly. 
+
+2011-09-26 v0.5.0
+-----------------
+
+Small changes that make faceted nav a bit nicer to work with
+
+* MINOR: Updated text to be clearer that case sensitive is an untokenised 
+  indexing method
+* BUGFIX: In some cases it's best to have a quoted string for the facet 
+  search (eg if the term is a Case sensitive untokenised string
+* BUGFIX: Allow multiple and terms with the same field names
+* FEATURE: Added ability to display a listing of results as the search page
+* BUGFIX: Allow freeform queries to be specified if the user knows how
+* BUGFIX: Remove the exclusion of multivaluefields if they have an empty 
+  set as their value, otherwise they're not included in searches
+* BUGFIX: Check that a valid field was found before adding it to the list of 
+  fields being searched
+
+2011-07-21 v0.4.1
+-----------------
+
+* Fix issue where subsites was disabled and occasionally caused issues with 
+  URLSegment
+
+2011-07-12 v0.4.0
+-----------------
+
+* Users can configure solr indexing from the "Solr" section of the admin 
+  interface. Select the page type, then select which fields should be indexed
+  for that type
+* Updated the schema.xml to allow for a 'multitext' type which provides for 
+  case insensitive searching
+* Introduced the ability to boost certain fields in searches
+* Added dismax option for search 
+
+2011-07-11 v0.3.5
+-----------------
+
+* Indexing of content uses the queuedjobs module if available to process
+  the actual indexing of an individual item. Uses the immediate mode jobs
+  so that the indexing happens straight away. 
+
+2011-05-27 v0.3.4
+-----------------
+
+* Added ability to specify which fields will be searched on by default
+  when a user performs a query
+
+2011-03-31 v0.3.3
+-----------------
+
+* Fixed issue where empty strings in facet results were being passed through
+  as _empty_
+
+2011-03-08 v0.3.2
+-----------------
+
+* Fixed error caused by unpublish failing if solr has gone away
+
+2011-02-03 v0.3.1
+-----------------
+
+* Fixed declaration of reindex job to detect queuedjob module existence first
+
+2010-10-26 v0.3.0
+-----------------
+
+* Added ability to query against both Live and Draft data sources. If an 
+  object is versionable, it will be indexed with either Live or Stage, 
+  depending on whether it is written or published. For non-versioned content, 
+  it is actually indexed with BOTH stages, indicating that it is relevant for 
+  a search in either stage"
+
+ 
+2010-10-21 v0.2.1
+-----------------
+
+* Fixed bug where associativity precedence in query syntax stopped pages 
+  being found by 'title' 
+
+
+2010-06-21 v0.2.0
+-----------------
+
+* Better interface for searching by providing a complete 'SearchPage' 
+  implementation
+* Added support for faceting
+* Added support for queueing reindexing to reduce user wait time (if the 
+  QueuedJobs module is installed)
+

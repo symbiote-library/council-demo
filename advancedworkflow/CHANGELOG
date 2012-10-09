@@ -1,0 +1,104 @@
+2012-07-25 v2.0.0
+-----------------
+
+* Updated everything to SS3.0!
+* Future publish/unpublish dates are respected in workflow publish actions 
+
+2012-05-10 v1.6.0
+-----------------
+
+* Added functionality to have a table listing all of a user's assigned
+  workflows  displayed with actions to trigger the appropriate transitions
+  for those workflows. It implies the following code exists in a Controller
+  somewhere to be able to retrieve the list of workflows assigned to the user. 
+	
+	/**
+	 * Get the current user's list of workflows 
+	 */
+	public function UserWorkflows() {
+		$workflows = singleton('WorkflowService')->usersWorkflows(Member::currentUser());
+		return $workflows;
+	}
+
+2012-03-15 1.5.2
+----------------
+
+* Make sure to only add the queuedjobs when in Stage editing mode
+
+2012-02-02 1.5.1
+----------------
+
+* Fix issue where publish job was continually being readded
+
+2012-01-20 1.5.0
+----------------
+
+* Added an extension for embargo/expiry using the queuedjobs module
+* Changed signature of the workflowpublish queued job
+
+2012-01-11 v1.4.1
+-----------------
+
+* Renamed Step to Action
+
+2012-01-10 v1.4.0
+-----------------
+
+* Allow definition of method to determine where parent for workflow
+  lookups is
+
+2011-09-27 v1.3.1
+-----------------
+
+* Added a listing of all completed workflow instances for a workflow definition
+* Add a check for the presence of the item the workflow instance was started 
+  against incase it was deleted
+
+2011-09-22 v1.3.0
+-----------------
+
+* Allow users to update workflow actions from the workflow screen to move items through the workflow
+* Added a targetUpdated method to WorkflowAction that gets called if there's a current workflow instance when a
+* Look for a WorkflowLink method on an object for linking back in outbound emails
+
+
+2011-08-26 v1.2.1
+-----------------
+
+* Added ability to use a listing template for the Email template of the 
+  NotifyUsersWorkflowAction. This allows full access to the workflow
+  and its history. 
+
+2011-06-08 v1.2.0
+-----------------
+
+* Refactored WorkflowAction and WorkflowActionInstance to
+  * Make it easier to specify action instance classes through the use of
+    a new static
+    `static $instance_class = 'WorkflowActionInstance';`
+  * updateWorkflowFields() moved to WorkflowActionInstance where it more
+    correctly belongs
+* Added `actionStart($transition)` and `actionComplete($transition)` methods to
+  WorkflowActionInstance which makes it easier to hook when a workflow action
+  is entered or left. 
+* Fixed issue where workflow transition being executed wasn't checked to ensure
+  it was a valid transition to take
+
+2011-06-08 v1.1.2
+-----------------
+
+* Fixed undefined index error when restricting actions on existing transitions
+
+2011-05-18 v1.1.0
+-----------------
+
+* Fixed issue where new transitions weren't restricted to going to actions
+  in the same workflow
+
+
+2011-04-28 v1.1.0
+-----------------
+
+* Added some level of support for objects other than Pages to work within 
+  workflows, using File objects as the case for the moment. 
+* Added tracking of the Initiator of a workflow
