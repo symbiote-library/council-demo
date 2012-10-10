@@ -16,16 +16,22 @@ class Page extends SiteTree {
 	
 	
 	public function LatestNews($limit = 5){
-		$limit = (int)$limit;
-		if($items = DataObject::get('NewsArticle', $filter='', 'Created Desc', $join='', $limit = "0,$limit")){
-			return $items;
-		}
+		return NewsArticle::get()->sort('Created', 'Desc')->limit($limit);
 	}
 	
 	public function LatestSurveys($limit = 5){
-		$limit = (int)$limit;
-		if($items = DataObject::get('SurveyPage', $filter='', 'Created Desc', $join='', $limit = "0,$limit")){
-			return $items;
+		return UserDefinedForm::get()->sort('Created', 'Desc')->limit($limit);
+	}
+
+
+	/**
+	 * get a number of upcoming events from the calendar
+	 * @return ArrayList
+	 **/
+	public function UpcomingEvents($limit = 5){
+		$calendar = Calendar::get()->filter('ParentID', 0)->first();
+		if($calendar){
+			return $calendar->UpcomingEvents($limit);			
 		}
 	}
 

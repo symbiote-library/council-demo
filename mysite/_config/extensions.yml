@@ -1,0 +1,21 @@
+---
+Name: extensions
+---
+SiteConfig:
+  extensions:
+    ['CustomSiteConfig', 'Addressable', 'Geocodable']
+SiteTree:
+  extensions:
+    ['SolrIndexable']
+ContentController:
+  extensions:
+    ['SolrSearchExtension']
+Security:
+  extensions:
+    ['SolrSearchExtension']
+CalendarEvent:
+  extensions:
+    ['CalendarEventExtension']
+UserDefinedForm:
+  extensions:
+    ['UserDefinedFormExtension']

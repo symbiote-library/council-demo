@@ -1,59 +1,59 @@
-<% require css(event_calendar/css/calendar.css) %>
-<% require javascript(event_calendar/javascript/calendar_core.js) %>
-
 <section id="content">
   	<div class="top">
 		<div class="container clearfix">
 			<div class='grid4 first'>
-				
-				<div id="calendar-sidebar">
-					<h3><% _t('BROWSECALENDAR','Browse the Calendar') %></h3>
-					<div id="monthNav">
-						$LiveCalendarWidget
-						<h4><% _t('FILTERCALENDAR','Fitler calendar') %>:</h4>
-						$CalendarFilterForm
-					</div>
-				</div>
-				
-				<% include Sidebar %> 
+				<% include CalendarSidebar %>
 			</div>
     		<div class="grid8">
       			<div id="topHeading" class="clearfix">
-					<span class="back"><a href="$CalendarBackLink"><% _t('BACKTO','Back to') %> $Parent.Title</a></span>
-					<span class="feed"><a href="$RSSLink"><% _t('SUBSCRIBE','Subscribe to the Calendar') %></a></span>
-					<h2>$Parent.Title</h2>
+					<span class='subscribe-to-list'>
+	    				<a href='rss/events' title='Subscribe to Events RSS feed' name='rss' class='iconic rss'></a>
+	    				<a href='rss/events' title='Subscribe to Events RSS feed'>Subscribe</a>
+	    			</span>
+					<h2>$Title</h2>
 				</div>
 
-				<% if Level(2) %>
-					<% include BreadCrumbs %>
-				<% end_if %>
 				<div class="vevent">
-					<% if OtherDates %>
+					<% if OtherDatess %>
 					<div id="additionalDates">
 						<h4><% _t('ADDITIONALDATES','Additional Dates') %></h4>
 						<dl class="date clearfix">
-						<% control OtherDates %>
-							<dt><a href="$Link" title="$Event.Title">$_Dates</a></dt>
-
-						<% end_control %> 
+							<% loop OtherDates %>
+								<dt><a href="$Link" title="$Event.Title">$DateRange</a></dt>
+							<% end_loop %> 
 						</dl>
 					</div>
 					<% end_if %>
-					<h3 class="summary">$Title</h3>
 
-					<% control CurrentDate %>
-					<h4><a href="$ICSLink" title="Add to Calendar">$_Dates</a></h4>
+					<% with CurrentDate %>
+						<div class='clearfix'>
+							<div class='grid5 first'>
+								<div class="dates">
+									$DateRange | <% if AllDay %>All Day<% else_if StartTime %>$TimeRange<% end_if %>
+								</div>
+								$Event.Content
+								<% if OtherDates %>
+									<h4><% _t('SEEALSO','See also') %>:</h4>
+									<ul>
+									<% loop OtherDates %>
+								 		<li><a href="$Link" title="$Event.Title">$DateRange</a>
+											<% if StartTime %>
+												$TimeRange
+											<% end_if %>
+										</li>
+									<% end_loop %>
+									</ul>
+								<% end_if %>
+								<div><a class="btn add" href="$ICSLink"><% _t('ADD','Add to Calendar') %></a></div>
+							</div>
+							
 
-					<% if StartTime %>
-					<ul id="times">
-						<li>$_Times</li>	
-					</ul>
-					<% end_if %>		
-					<% end_control %>
+							<div class='grid3'>
+								$Event.EventImage.SetWidth(222)
+							</div>
+						</div>
 
-					$Content
-					$Form
-					$PageComments
+					<% end_with %>
 				</div>
 			</div>
 		</div>

@@ -5,7 +5,7 @@
 			<% include Sidebar %> 
 			</div>         		
     		<div class="grid9">
-    			<span class='subscribe'>
+    			<span class='subscribe-to-list'>
     				<a href='rss/news' title='Subscribe to RSS feed' name='rss' class='iconic rss'></a>
     				<a href='rss/news' title='Subscribe to RSS feed'>Subscribe</a>
     			</span>

@@ -219,17 +219,25 @@ form .optionset li{
 	padding-bottom:18px;
 }
 
-.img-wrap figure {
-	margin:4px -3px 0 3px;
+figure.framed {
+	display: block;
 	border:5px solid #fff;
 	border-radius:8px;
 	-moz-border-radius:8px;
 	-webkit-border-radius:8px;
-	box-shadow:0 0 5px rgba(0,0,0,.1);
-	-moz-box-shadow:0 0 5px rgba(0,0,0,.1);
-	-webkit-box-shadow:0 0 5px rgba(0,0,0,.1);
+	box-shadow:0 0 5px rgba(0,0,0,.2);
+	-moz-box-shadow:0 0 5px rgba(0,0,0,.2);
+	-webkit-box-shadow:0 0 5px rgba(0,0,0,.2);
 }
 
+figure.framed img{
+	max-width: 100%;
+	height: auto;
+}
+
+.img-wrap figure a, .img-wrap figure img{
+	display: block;
+}
 .extra-wrap {
 	overflow:hidden;
 }
@@ -240,6 +248,7 @@ form .optionset li{
 	color: #FFF;
 	padding: 5px 10px;
 	background: #325cab;
+	margin: 0 0 10px;
 }
 
 .boxTitle a{
@@ -844,6 +853,35 @@ header .breadcrumbs .home{
 	padding:0 0 6px 17px;
 }
 
+
+/* Listings (news, events etc)
+/*********************************/
+
+.listing-item{
+	padding: 10px 0 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+
+/* rss
+/*********************************/
+
+.subscribe-to-list{
+	position: absolute;
+	right: 0; top: 15px;
+}
+
+.subscribe-to-list a{
+	color: #999;
+}
+
+.subscribe-to-list a.rss{
+	font-size: 20px;
+	color: orange;
+	position: relative;
+	top: -5px;
+}	
+
 /* sidebar
 /*********************************/
 
@@ -854,6 +892,7 @@ header .breadcrumbs .home{
 	border-top-left-radius:8px;
 	-moz-border-top-left-radius:8px;
 	-webkit-border-top-left-radius:8px;
+	border-bottom: 1px solid #ccc;
 }
 
 /* latest news
@@ -873,22 +912,18 @@ header .breadcrumbs .home{
 	padding-bottom: 5px;
 }
 
+
+/* home page
+/*********************************/
+
+.home-col-summary{
+	height: 120px;
+}
+
 /* news holder page
 /*********************************/
 
-#newsHolder .subscribe{
-	position: absolute;
-	right: 0; top: 15px;
-}
 
-#newsHolder .subscribe a{
-	color: #999;
-}
-
-#newsHolder .subscribe a.rss{
-	font-size: 20px;
-	color: orange;
-}	
 
 
 /* latest events
@@ -909,6 +944,42 @@ header .breadcrumbs .home{
 
 #somethingElse .boxTitle{
 	background: #ee7422;
+}
+
+/* events page
+/*********************************/
+#calendar-widgets{
+	background: #efefef;
+	padding-top: 20px;
+}
+
+#calendar-nav{
+	padding: 20px;
+}
+
+.calendar-widget table{
+	margin: 0 auto;
+}
+
+#month-jumper{
+	background: #dedede;
+	padding: 20px;
+}
+
+#jump-to-month{
+	margin-bottom: 10px;
+}
+
+#Form_MonthJumpForm{
+	overflow: hidden;
+}
+
+#Form_MonthJumpForm .field, #Form_MonthJumpForm fieldset{
+	float: left;
+}
+
+#Form_MonthJumpForm .field{
+	margin: 5px 10px 0 0;
 }
 
 	
@@ -1113,43 +1184,9 @@ footer .phone strong {
 	
 /*==========================================*/
 
-/* Calendar overrides */
-
-.container #calendar-main{
-	width: 100%;
-}
-
-.container #calendar-sidebar{
-	float: none;
-	width: auto;
-}
-
-.container #topHeading{
+#topHeading{
 	padding-top: 0;
 }
-
-.container #monthNav{
-	background: #EFEFEF;
-	border-top-left-radius:8px;
-	-moz-border-top-left-radius:8px;
-	-webkit-border-top-left-radius:8px;
-	padding-top: 1px;
-}
-
-.container #monthNav h2{
-	border-top-left-radius:8px;
-	-moz-border-top-left-radius:8px;
-	-webkit-border-top-left-radius:8px;
-}
-
-#live-calendar-widget .calendar tbody td.hasEvent, #live-calendar-widget .calendar tbody td.hasEvent a:hover{
-	background-image: none !important;
-}
-
-#live-calendar-widget .calendar tbody td.hasEvent{
-	background-color: #6fb944;
-	color: #FFF;
-}	
 	
 
 /* Newsletter Subscription */

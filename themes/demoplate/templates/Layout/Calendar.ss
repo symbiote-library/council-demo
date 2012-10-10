@@ -1,30 +1,18 @@
-<% require css(event_calendar/css/calendar.css) %>
-<% require javascript(event_calendar/javascript/calendar_core.js) %>
-
-
 <section id="content">
   	<div class="top">
 		<div class="container clearfix">
 			<div class='grid4 first'>
-				
-				<div id="calendar-sidebar">
-					<h3><% _t('BROWSECALENDAR','Browse the Calendar') %></h3>
-
-					<div id="monthNav">
-						$LiveCalendarWidget
-						$MonthNavigator
-						$CalendarFilterForm
-					</div>
-				</div>
-				
-				<% include Sidebar %> 
+				<% include CalendarSidebar %>
 			</div>
     		<div class="grid8">
       			
 				<div id="calendar-main">
 					 <div id="topHeading" class="clearfix">
-						<span class="feed"><a href="$RSSLink"><% _t('SUBSCRIBE','Subscribe to the Calendar') %></a></span>
-						<h1>$Title</h1>
+						<span class='subscribe-to-list'>
+		    				<a href='rss/events' title='Subscribe to Events RSS feed' name='rss' class='iconic rss'></a>
+		    				<a href='rss/events' title='Subscribe to Events RSS feed'>Subscribe</a>
+		    			</span>
+						<h1>$Event.Title</h1>
 						$Content
 					</div>
 				<div id="dateHeader">
@@ -34,49 +22,8 @@
 				</div>
 
 				<% if Events %>
-					<div id="events">
-						<% control Events %>
-							<div class="vevent clearfix">
-								<div class="dates">$_Dates</div>
-								<div class="details">
-									<h3 class="summary"><% if Announcement %>$EventTitle<% else %><a href="$Link">$EventTitle</a><% end_if %></h3>
-									<dl>
-									<% if AllDay %>
-										<dt><% _t('ALLDAY','All Day') %></dt>
-									<% else %>
-										<% if StartTime %>
-										<dt><% _t('TIME','Time') %>:&nbsp;</dt>
-												<dd>$_Times</dd>
-										<% end_if %>
-									<% end_if %>
-									</dl>
-									<div class="description">
-										<% if Announcement %>
-											$Content
-										<% else %>
-											<% control Event %>$Content.LimitWordCount(60)<% end_control %> <a href="$Link"><% _t('MORE','more...') %></a>
-										<% end_if %>
-										<% if OtherDates %>
-											<h4><% _t('SEEALSO','See also') %>:</h4>
-											<ul>
-											<% control OtherDates %>
-										 		<li><a href="$Link" title="$Event.Title">$_Dates</a>
-													<% if StartTime %>
-														<ul>
-															<li>$_Times</li>
-														</ul>
-													<% end_if %>
-												</li>
-											<% end_control %>
-											</ul>
-										<% end_if %>
-									</div>
-								</div>
-								<ul class="utility">
-									<li><a class="btn add" href="$ICSLink"><% _t('ADD','Add to Calendar') %></a></li>
-								</ul>
-							</div>
-						<% end_control %>
+					<div id="event-calendar-events">
+						<% include EventList %>
 					</div>
 				<% else %>
 					<% _t('NOEVENTS','There are no events') %>.
