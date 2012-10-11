@@ -9,7 +9,7 @@
 	          		<ul class="list2">
 	            		<li><strong>$SiteConfig.Title</strong></li>
 	            		<li>$SiteConfig.FullAddressFormatted<br /><br /></li>
-	            		<li><a href='contact-us#map'>View address on map</a></li>
+	            		<li><a id='view-on-map' href='contact-us#map'>View address on map</a></li>
 	            	</ul>
 	          	</div>
 

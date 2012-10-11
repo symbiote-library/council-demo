@@ -1,0 +1,19 @@
+#zen-gallery{
+	overflow: hidden;
+}
+
+.zen-gallery-item{
+	float: left;
+	width: 25%;
+	margin-bottom: 20px;
+}
+
+#zen-gallery a{
+	border-bottom: none;
+}
+
+#zen-gallery img{
+	float: none;
+	max-width: 80%;
+	margin: 0;
+}

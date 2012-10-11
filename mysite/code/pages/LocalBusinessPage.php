@@ -10,13 +10,17 @@ class LocalBusinessPage extends Page implements FrontendCreateableObject{
 		'Geocodable'
 	);
 	
-	static $_defaults = array(
+	static $defaults = array(
 		'ShowInMenus' => 0
+	);
+
+	static $casting = array(
+		'Content' => 'Text'
 	);
 	
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Content.Main', new TextField('WebsiteURL', 'Website URL'), 'Content');
+		$fields->addFieldToTab('Root.Main', new TextField('WebsiteURL', 'Website URL'), 'Content');
 		return $fields;
 	}
 	
@@ -28,7 +32,7 @@ class LocalBusinessPage extends Page implements FrontendCreateableObject{
 	}	
 	
 	public function getFrontendCreateFields(){
-		$fields = new FieldSet(
+		$fields = new FieldList(
 			new TextField('Title', 'Business name'),
 			new TextAreaField('Content', 'Description'),
 			new TextField('WebsiteURL', 'Website URL'),
@@ -45,8 +49,6 @@ class LocalBusinessPage extends Page implements FrontendCreateableObject{
 	}
 	
 	public function frontendCreated(){
-		$svc = singleton('WorkflowService');
-		$svc->startWorkflow($this);
 	}
 }
 

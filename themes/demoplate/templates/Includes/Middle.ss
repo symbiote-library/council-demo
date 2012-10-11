@@ -1,4 +1,4 @@
-<div class="middle">
+<!-- <div class="middle">
    	<div class="container clearfix">
        	<div class="grid3 first">
 			<h2>Bottom Left</h2>
@@ -43,4 +43,4 @@
 
        	</div>
     </div>
-</div>
+</div> -->

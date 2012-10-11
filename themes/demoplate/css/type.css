@@ -63,7 +63,9 @@ a:hover {
     font-style: normal;
 }
 
-
+h1,h2,h3,h4,h5,h6{
+	letter-spacing: -1px;
+}
 
 h1 {
 	font-size:30px;
@@ -72,6 +74,9 @@ h1 {
 	font-weight:normal;
 	font-weight:normal;
 	margin-bottom:.7em;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	letter-spacing: -2px;
 }
 
 h2 {

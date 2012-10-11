@@ -6,14 +6,14 @@
  * @author marcus@silverstripe.com.au
  * @license BSD License http://silverstripe.org/bsd-license/
  */
-class FrontendFileCreatable extends DataObjectDecorator {
+class FrontendFileCreatable extends DataExtension {
 	
 
 	protected $creatorPage;
 
 
 	public function getFrontendCreateFields() {
-		$fields = new FieldSet(
+		$fields = new FieldList(
 			new TextField('Title', 'Title'),
 			new FileField('FileUpload', 'Select File')
 		);

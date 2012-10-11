@@ -43,38 +43,24 @@ class Page_Controller extends ContentController {
 
 	public function init() {
 		parent::init();
-		
+
 		$theme = THEMES_DIR . '/' . SSViewer::current_theme();
-		// combine css files - was not working on server so...
-   //     	$CSSFiles = array(
-   //     		$theme . '/css/reset.css',
-   //     		$theme . '/css/grid.css',
-   //     		$theme . '/css/iconic.css',
-			// $theme . '/css/type.css',
-   //     		$theme . '/css/style.css'
-   //     	);  
-   //     	Requirements::combine_files('csspacked.css', $CSSFiles); 
-
-       	Requirements::css($theme . '/css/reset.css');
-		Requirements::css($theme . '/css/grid.css');
-		Requirements::css($theme . '/css/reset.css');
-		Requirements::css($theme . '/css/iconic.css');
-		Requirements::css($theme . '/css/type.css');
-		Requirements::css($theme . '/css/style.css');
-
-       
-		
         
-       //combine js files - also not working on server, so...
-       // $JSFiles = array(
-       // 	THIRDPARTY_DIR.'/jquery/jquery.js',
-       //     $theme . '/js/script.js' 
-       // );  	
-       // Requirements::combine_files('jspacked.js', $JSFiles);
-
-       Requirements::javascript(THIRDPARTY_DIR.'/jquery/jquery.js');
-       Requirements::javascript($theme . '/js/script.js');
-
+        Requirements::set_combined_files_folder($theme . '/combined');
+        
+        Requirements::combine_files('combined.js', array(
+            THIRDPARTY_DIR . '/jquery/jquery.js',
+            $theme . '/javascript/script.js'
+        ));
+        
+        Requirements::combine_files('combined.css', array(
+            $theme . '/css/reset.css',
+            $theme . '/css/grid.css',
+            $theme . '/css/iconic.css',
+            $theme . '/css/type.css',
+            $theme . '/css/style3.css',
+            $theme . '/css/style.css'
+        ));
 	}
 	
 	function PageTitle(){

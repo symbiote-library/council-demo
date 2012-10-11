@@ -20,7 +20,8 @@ class ObjectCreatorPage extends Page {
 		'PublishOnCreate'			=> 'Boolean',
 		'ShowCmsLink'				=> 'Boolean',
 		'WhenObjectExists'			=> "Enum('Rename, Replace, Error', 'Rename')",
-		'AllowUserWhenObjectExists'	=> 'Boolean'
+		'AllowUserWhenObjectExists'	=> 'Boolean',
+		'SuccessMessage'			=> 'HTMLText'
 	);
 	
 	public static $defaults = array(
@@ -50,33 +51,40 @@ class ObjectCreatorPage extends Page {
 		$types = array_merge($types, self::$additional_types);
 		$types = array_combine($types, $types);
 
-		$fields->addFieldToTab('Root.Content.Main', new DropdownField('CreateType', _t('FrontendCreate.CREATE_TYPE', 'Create objects of which type?'), $types), 'Content');
-		$fields->addFieldToTab('Root.Content.Main', new CheckboxField('PublishOnCreate', _t('FrontendCreate.PUBLISH_ON_CREATE', 'Publish after creating (if applicable)')), 'Content');
-		$fields->addFieldToTab('Root.Content.Main', new CheckboxField('ShowCmsLink', _t('FrontendCreate.SHOW_CMS_LINK', 'Show CMS link for Page objects after creation')), 'Content');
+		$fields->addFieldToTab('Root.Main', new DropdownField('CreateType', _t('FrontendCreate.CREATE_TYPE', 'Create objects of which type?'), $types), 'Content');
+		$fields->addFieldToTab('Root.Main', new CheckboxField('PublishOnCreate', _t('FrontendCreate.PUBLISH_ON_CREATE', 'Publish after creating (if applicable)')), 'Content');
+		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowCmsLink', _t('FrontendCreate.SHOW_CMS_LINK', 'Show CMS link for Page objects after creation')), 'Content');
+		$fields->addFieldToTab('Root.AfterSubmission', new HTMLEditorField('SuccessMessage', 'Success Message'));
 
-		if ($this->CreateType && Object::has_extension($this->CreateType, 'Hierarchy')) {
-			$parentType = isset(self::$parent_map[$this->CreateType]) ? self::$parent_map[$this->CreateType] : $this->CreateType;
-			
-			if (!$this->AllowUserSelection) {
-				$fields->addFieldToTab('Root.Content.Main', new TreeDropdownField('CreateLocationID', _t('FrontendCreate.CREATE_LOCATION', 'Create new items where?'), $parentType), 'Content');
-				$fields->addFieldToTab('Root.Content.Main', new CheckboxField('ClearCreateLocation', _t('FrontendCreate.CLEAR_CREATE_LOCATION', 'Reset location value')), 'Content');
-				$fields->addFieldToTab('Root.Content.Main', new CheckboxField('AllowUserSelection', _t('FrontendCreate.ALLOW_USER_SELECT', 'Allow users to select where to create items')), 'Content');
-
-			} else {
-				$fields->addFieldToTab('Root.Content.Main', new CheckboxField('AllowUserSelection', _t('FrontendCreate.ALLOW_USER_SELECT', 'Allow users to select where to create items')), 'Content');
+		if ($this->CreateType) {
+			if(Object::has_extension($this->CreateType, 'Hierarchy')){
+				$parentType = isset(self::$parent_map[$this->CreateType]) ? self::$parent_map[$this->CreateType] : $this->CreateType;
 				
-				$fields->addFieldToTab('Root.Content.Main', new TreeDropdownField('RestrictCreationTo', _t('FrontendCreate.RESTRICT_LOCATION', 'Restrict creation to beneath this location'), $parentType), 'Content');
-				$fields->addFieldToTab('Root.Content.Main', new CheckboxField('ClearRestrictCreationTo', _t('FrontendCreate.CLEAR_RESTRICT', 'Reset restriction value')), 'Content');
+				if (!$this->AllowUserSelection) {
+					$fields->addFieldToTab('Root.Main', new TreeDropdownField('CreateLocationID', _t('FrontendCreate.CREATE_LOCATION', 'Create new items where?'), $parentType), 'Content');
+					$fields->addFieldToTab('Root.Main', new CheckboxField('ClearCreateLocation', _t('FrontendCreate.CLEAR_CREATE_LOCATION', 'Reset location value')), 'Content');
+					$fields->addFieldToTab('Root.Main', new CheckboxField('AllowUserSelection', _t('FrontendCreate.ALLOW_USER_SELECT', 'Allow users to select where to create items')), 'Content');
+
+				} else {
+					$fields->addFieldToTab('Root.Main', new CheckboxField('AllowUserSelection', _t('FrontendCreate.ALLOW_USER_SELECT', 'Allow users to select where to create items')), 'Content');
+					
+					$fields->addFieldToTab('Root.Main', new TreeDropdownField('RestrictCreationTo', _t('FrontendCreate.RESTRICT_LOCATION', 'Restrict creation to beneath this location'), $parentType), 'Content');
+					$fields->addFieldToTab('Root.Main', new CheckboxField('ClearRestrictCreationTo', _t('FrontendCreate.CLEAR_RESTRICT', 'Reset restriction value')), 'Content');
+				}
+			}
+			if(Object::has_extension($this->CreateType, 'WorkflowApplicable')){
+				$workflows = WorkflowDefinition::get()->map()->toArray();
+				$fields->addFieldToTab('Root.Main', DropdownField::create('WorkflowDefinitionID', 'Workflow Definition', $workflows)->setHasEmptyDefault(true), 'Content');
 			}
 		} else {
-			$fields->addFieldToTab('Root.Content.Main', new LiteralField('SaveNotice', _t('FrontendCreate.SAVE_NOTICE', '<p>Select a type to create and save the page for additional options</p>')), 'Content');
+			$fields->addFieldToTab('Root.Main', new LiteralField('SaveNotice', _t('FrontendCreate.SAVE_NOTICE', '<p>Select a type to create and save the page for additional options</p>')), 'Content');
 		}
 
-		$fields->addFieldToTab('Root.Content.Main', new TextField('CreateButtonText', _t('FrontendCreate.UPLOAD_TEXT', 'Upload button text')), 'Content');
+		$fields->addFieldToTab('Root.Main', new TextField('CreateButtonText', _t('FrontendCreate.UPLOAD_TEXT', 'Upload button text')), 'Content');
 
 		if($this->useObjectExistsHandling()){
-			$fields->addFieldToTab('Root.Content.Main', new DropdownField('WhenObjectExists', 'When Object Exists', $this->dbObject('WhenObjectExists')->EnumValues()), 'Content');
-			$fields->addFieldToTab('Root.Content.Main', new CheckboxField('AllowUserWhenObjectExists', _t('FrontendCreate.ALLOW_USER_WHEN_OBJECT_EXISTS', 'Allow users to select an action to take if the object already exists')), 'Content');
+			$fields->addFieldToTab('Root.Main', new DropdownField('WhenObjectExists', 'When Object Exists', $this->dbObject('WhenObjectExists')->EnumValues()), 'Content');
+			$fields->addFieldToTab('Root.Main', new CheckboxField('AllowUserWhenObjectExists', _t('FrontendCreate.ALLOW_USER_WHEN_OBJECT_EXISTS', 'Allow users to select an action to take if the object already exists')), 'Content');
 		}	
 
 		return $fields;
@@ -113,7 +121,14 @@ class ObjectCreatorPage_Controller extends Page_Controller {
 		'createobject',
 	);
 	
-	public function index() {
+	public function index($request){
+		if($request->requestVar('new')){
+			return $this->customise(array(
+				'Title' => 'Success',
+				'Content' => $this->SuccessContent(),
+				'Form' => ''
+			));
+		}
 		return array();
 	}
 
@@ -124,7 +139,7 @@ class ObjectCreatorPage_Controller extends Page_Controller {
 
 	public function CreateForm() {
 		$type = $this->CreateType;
-		$fields = new FieldSet(
+		$fields = new FieldList(
 			new TextField('Title', _t('FrontendCreate.TITLE', 'Title'))
 		);
 
@@ -143,7 +158,7 @@ class ObjectCreatorPage_Controller extends Page_Controller {
 				}
 			}
 		} else {
-			$fields = new FieldSet(
+			$fields = new FieldList(
 				new LiteralField('InvalidType', 'Invalid configuration is incorrectly configured')
 			);
 		}
@@ -165,15 +180,17 @@ class ObjectCreatorPage_Controller extends Page_Controller {
 		}
 		
 		if ($new = $this->NewObject()) {
+			$firstFieldName = $fields->first()->getName();
+
 			$title = $new->getTitle();
 			if ($this->ShowCmsLink) {
-				$fields->insertFirst(new LiteralField('CMSLink', sprintf(_t('FrontendCreate.ITEM_CMS_LINK', '<p><a href="admin/show/%s" target="_blank">Edit %s in the CMS</a></p>'), $new->ID, $title)));
+				$fields->insertBefore(new LiteralField('CMSLink', sprintf(_t('FrontendCreate.ITEM_CMS_LINK', '<p><a href="admin/show/%s" target="_blank">Edit %s in the CMS</a></p>'), $new->ID, $title)), $firstFieldName);
 			}
 			
-			$fields->insertFirst(new LiteralField('NewItemCreated', sprintf(_t('FrontendCreate.NEW_ITEM_CREATED', '<p><a href="%s" target="_blank">%s</a> successfully created</p>'), $new->Link(), $title)));
+			$fields->insertBefore(new LiteralField('NewItemCreated', sprintf(_t('FrontendCreate.NEW_ITEM_CREATED', '<p><a href="%s" target="_blank">%s</a> successfully created</p>'), $new->Link(), $title)), $firstFieldName);
 		}
 		
-		$actions = new FieldSet(
+		$actions = new FieldList(
 			new FormAction('createobject', $this->data()->CreateButtonText)
 		);
 
@@ -207,10 +224,27 @@ class ObjectCreatorPage_Controller extends Page_Controller {
 		$id = (int) $this->request->requestVar('new');
 		if ($id) {
 			$item = DataObject::get_by_id($this->CreateType, $id);
+			if(!$item){
+				$item = Versioned::get_by_stage($this->CreateType, "Stage", "{$this->CreateType}.ID = $id")->First();
+			}
 			return $item;
 		}
 		
 		return null;
+	}
+
+
+	/**
+	 * Get's the success message and replaces the placeholders with the new objects values
+	 * @return string
+	 */
+	public function SuccessContent(){
+		if($object = $this->NewObject()){
+			$message = $this->Data()->SuccessMessage;
+			$message = str_replace('$Title', $object->Title, $message);
+			$message = str_replace('$Link', $object->Link('?stage=Stage'), $message);
+			return $message;
+		}
 	}
 
 	/**
@@ -277,6 +311,15 @@ class ObjectCreatorPage_Controller extends Page_Controller {
 				$this->redirect($this->data()->Link());
 				return;
 			}
+
+			// get workflow
+			$workflowID = $this->data()->WorkflowDefinitionID;
+			$workflow = false;
+			if ($workflowID && $obj->hasExtension('WorkflowApplicable')){
+				if($workflow = WorkflowDefinition::get()->byID($workflowID)){
+					$obj->WorkflowDefinitionID = $workflowID;	
+				}
+			}
 			
 			if (Object::has_extension($this->CreateType, 'Versioned')) {
 				// switching to make sure everything we do from now on is versioned, until the
@@ -289,6 +332,15 @@ class ObjectCreatorPage_Controller extends Page_Controller {
 			} else {
 				$obj->write();
 			}
+
+			// start workflow
+			if($workflow){
+				$svc = singleton('WorkflowService');
+				$svc->startWorkflow($obj);	
+			}
+			
+
+			
 
 			$this->extend('objectCreated', $obj);
 			// let the object be updated directly

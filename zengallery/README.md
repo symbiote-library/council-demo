@@ -9,6 +9,5 @@ Requirements
 SilverStripe 3.X
 
 TODO
-----
 
-Default css for Simple theme
+Sortable images. Need to extend UploadField to handle many_many sorting

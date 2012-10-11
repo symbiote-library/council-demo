@@ -12,7 +12,7 @@
 	    			</span>
 					<h2>$Title</h2>
 				</div>
-
+				
 				<div class="vevent">
 					<% if OtherDatess %>
 					<div id="additionalDates">

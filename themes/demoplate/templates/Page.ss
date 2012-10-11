@@ -20,7 +20,7 @@
 	    </div>
 	    <section class="adv-content">
 	    	<div class="container">
-	        <% include Breadcrumbs %>
+	        $Breadcrumbs
 	        <% control SearchForm %>
 				<form $FormAttributes role="search">
 					<fieldset>

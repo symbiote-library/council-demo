@@ -6,7 +6,7 @@ SiteConfig:
     ['CustomSiteConfig', 'Addressable', 'Geocodable']
 SiteTree:
   extensions:
-    ['SolrIndexable']
+    ['SolrIndexable', 'WorkflowApplicable', 'WorkflowEmbargoExpiryExtension']
 ContentController:
   extensions:
     ['SolrSearchExtension']

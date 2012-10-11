@@ -13,21 +13,24 @@
 							</figure>
 						</div>
 						<div class='grid5'>
-							<div class="dates">$DateRange | <% if AllDay %>All Day<% else_if StartTime %>$TimeRange<% end_if %></div>
+							<div class="dates"><strong>$DateRange | <% if AllDay %>All Day<% else_if StartTime %>$TimeRange<% end_if %></strong></div>
 							$Event.Content.LimitWordCount(60)
-							<a href="$Link"><% _t('MORE','more...') %></a>
 							<% if OtherDates %>
-								<h4><% _t('SEEALSO','See also') %>:</h4>
-								<ul>
-								<% loop OtherDates %>
-							 		<li><a href="$Link" title="$Event.Title">$DateRange</a>
-										<% if StartTime %>
-											$TimeRange
-										<% end_if %>
-									</li>
-								<% end_loop %>
-								</ul>
+								<div class='add-bottom'>
+									<strong>Other Dates and times:</strong>
+									<ul>
+										<% loop OtherDates %>
+									 		<li><a href="$Link" title="$Event.Title">$DateRange</a>
+												<% if StartTime %>
+													$TimeRange
+												<% end_if %>
+											</li>
+										<% end_loop %>
+									</ul>
+								</div>
 							<% end_if %>
+
+							<a class='readmore button' href="$Link">Read More</a>
 						</div>
 					</div>
 
