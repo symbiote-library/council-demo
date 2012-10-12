@@ -19,4 +19,5 @@ sitemap.xml
 google*.html
 *.sublime-project
 *.sublime-workspace
+themes/demoplate/combined/
 TODO

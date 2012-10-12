@@ -41,3 +41,7 @@ $coreCache = Zend_Cache::factory(
 );
 
 Zend_Date::setOptions(array('cache' => $coreCache));
+
+
+ZenGoogleAnalytics::$ga_id = "UA-35504764-1";
+

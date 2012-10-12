@@ -41,29 +41,6 @@ $(function(){
 		}
 	);
 	
-	// nice hovers on secondary menu
-	$('ul.categories li').hover(
-		function(){
-			if($(this).find('ul')){
-				$(this).parent('ul').find('li').not('.current, .section').find('> ul').slideUp('fast');
-				$(this).find('ul').slideDown('fast');
-			}
-			
-			//$(this).parent('ul').find('li.current').addClass('currentOff').removeClass('current');
-			//$(this).parent('ul').find('li.section').addClass('sectionOff').removeClass('section');
-		},
-		function(){
-			if($(this).is(".current, .section")){
-				// seems to be the only way to get this to work...
-			}else{
-				$(this).find('ul').slideUp('fast');
-			}
-			
-			//$(this).parent('ul').find('li.currentOff').addClass('current').removeClass('currentOff');
-			//$(this).parent('ul').find('li.sectionOff').addClass('section').removeClass('sectionOff');
-		}
-	);
-	
 	// search form
 	var currentSearch = $('#txtSearch').val();
 		$('#txtSearch').focus(function () {

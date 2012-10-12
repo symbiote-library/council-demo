@@ -12,7 +12,7 @@
 		    				<a href='rss/events' title='Subscribe to Events RSS feed' name='rss' class='iconic rss'></a>
 		    				<a href='rss/events' title='Subscribe to Events RSS feed'>Subscribe</a>
 		    			</span>
-						<h1>$Event.Title</h1>
+						<h1>$Title</h1>
 						$Content
 					</div>
 				<div id="dateHeader">

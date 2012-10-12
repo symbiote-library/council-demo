@@ -12,8 +12,8 @@ class UserDefinedFormExtension extends DataExtension {
 	
 	public function updateCMSFields(FieldList $fields){
 		$fields->addFieldToTab('Root.Main', new TextAreaField('Summary', 'Summary (used on the listing page)'));
-		$fields->addFieldToTab('Root.Image', UploadField::create('Image', 'Add an image to the page')
-            ->setFolderName('form-page-images')
+		$fields->addFieldToTab('Root.Imagees', UploadField::create('Image', 'Add an image to the page')
+            ->setFolderName('images')
             ->setConfig('allowedMaxFileNumber', 1)
         ); 
 	}

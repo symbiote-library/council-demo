@@ -35,5 +35,6 @@
   	</header>
   $Layout
   <% include Footer %>
+  <% include ZenGoogleAnalytics %>
 </body>
 </html>

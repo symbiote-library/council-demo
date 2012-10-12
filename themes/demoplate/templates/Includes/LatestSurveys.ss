@@ -4,7 +4,7 @@
 <% control LatestSurveys(5) %>
 	<li>
 		<% if First %>
-			<a class="img-box" href='$Link'>$FormImage.SetWidth(222)</a>
+			<figure class='framed'><a href='$Link'>$FormImage.CroppedImage(212, 153)</a></figure>
 			<div class='home-col-summary'>	
 				<h5><a href="$Link">$Title</a></h5>
 				$Summary.LimitCharacters(100)

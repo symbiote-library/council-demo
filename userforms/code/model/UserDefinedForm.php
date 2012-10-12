@@ -78,14 +78,8 @@ class UserDefinedForm extends Page {
 		$editor->setRows(3);
 		$label->addExtraClass('left');		
 
-		UserDefinedForm_EmailRecipient::$summary_fields=array(
-			'EmailAddress' => _t('UserDefinedForm.EMAILADDRESS', 'Email'),
-			'EmailSubject' => _t('UserDefinedForm.EMAILSUBJECT', 'Subject'),
-			'EmailFrom' => _t('UserDefinedForm.EMAILFROM', 'From')
-		);
-
 		// who do we email on submission
-		$emailRecipients = new GridField("EmailRecipients", "EmailRecipients", $this->EmailRecipients(), GridFieldConfig_RecordEditor::create(10));
+		$emailRecipients = GridField::create("EmailRecipients", "EmailRecipients", $this->EmailRecipients(), GridFieldConfig_RecordEditor::create(10));
 		$emailRecipients->getConfig()->getComponentByType('GridFieldAddNewButton')->setButtonName('Add Email Recipient');
 
 		$fields->addFieldsToTab("Root.FormOptions", $onCompleteFieldSet);		
@@ -898,6 +892,12 @@ class UserDefinedForm_EmailRecipient extends DataObject {
 		'Form' => 'UserDefinedForm',
 		'SendEmailFromField' => 'EditableFormField',
 		'SendEmailToField' => 'EditableFormField'
+	);
+
+	static $summary_fields = array(
+		'EmailAddress',
+		'EmailSubject',
+		'EmailFrom'
 	);
 	
 	/**

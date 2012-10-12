@@ -3,7 +3,11 @@
 		<div class="container">
 			
 			<div class="clearfix">
-			
+				
+				<div id='slider'>
+
+				</div>
+				
 				<div class="grid3 first">
 					<% include Sidebar %>
 				</div>

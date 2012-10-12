@@ -50,7 +50,7 @@ class Page_Controller extends ContentController {
         
         Requirements::combine_files('combined.js', array(
             THIRDPARTY_DIR . '/jquery/jquery.js',
-            $theme . '/javascript/script.js'
+            $theme . '/js/script.js'
         ));
         
         Requirements::combine_files('combined.css', array(

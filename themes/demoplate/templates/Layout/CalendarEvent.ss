@@ -32,6 +32,7 @@
 									$DateRange | <% if AllDay %>All Day<% else_if StartTime %>$TimeRange<% end_if %>
 								</div>
 								$Event.Content
+								<div class='half-bottom'><a class="more" href="$ICSLink"><% _t('ADD','Add to Calendar') %></a></div>
 								<% if OtherDates %>
 									<h4><% _t('SEEALSO','See also') %>:</h4>
 									<ul>
@@ -44,7 +45,6 @@
 									<% end_loop %>
 									</ul>
 								<% end_if %>
-								<div><a class="btn add" href="$ICSLink"><% _t('ADD','Add to Calendar') %></a></div>
 							</div>
 							
 

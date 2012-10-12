@@ -572,7 +572,7 @@ html.ie header nav ul li a:hover:before, html.ie nav ul li.current a:before, hea
 header .adv-content {
 	overflow:hidden;
 	background:#EFEFEF;
-	padding:10px 0 8px;
+	padding:10px 0 3px;
 }
 
 header .breadcrumbs {
@@ -760,7 +760,7 @@ header .breadcrumbs .home{
 
 }
 
-.categories li.hasChildren > a:before{
+/*.categories li.hasChildren > a:before{
 	content: " ";
 	width: 0;
 	height: 0;
@@ -776,7 +776,7 @@ header .breadcrumbs .home{
 	border-right: 7px solid transparent;
 	border-top: 7px solid #DDD;
 	border-bottom: none;
-}
+}*/
 
 .categories li ul{
 	display: none;
@@ -793,6 +793,10 @@ header .breadcrumbs .home{
 
 .categories li a:hover, .categories li.current > a{
 	background: #FFFCE6; 
+}
+
+.categories li.current > a{
+	font-weight: bold;
 }
 
 .categories li.section > a {
@@ -887,7 +891,7 @@ header .breadcrumbs .home{
 
 .subscribe-to-list{
 	position: absolute;
-	right: 0; top: 15px;
+	right: 0; top: 0px;
 }
 
 .subscribe-to-list a{
@@ -906,12 +910,10 @@ header .breadcrumbs .home{
 
 #sidebar h2, #sidebar h3{
 	font-size: 19px;
-	background: #EFEFEF;
-	padding: 7px 10px;
-	border-top-left-radius:8px;
-	-moz-border-top-left-radius:8px;
-	-webkit-border-top-left-radius:8px;
-	border-bottom: 1px solid #ccc;
+	padding: 5px 0;
+	letter-spacing: -1px;
+	border-bottom: 1px solid #ddd;
+	color: #666;
 }
 
 /* latest news
@@ -952,7 +954,11 @@ header .breadcrumbs .home{
 }
 
 #latestEvents .boxTitle{
-	background: #6fb944;
+	background: #5C9639;
+}
+
+#latestSurveys .boxTitle{
+	background: #EE7423;
 }
 
 /* something else

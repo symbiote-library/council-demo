@@ -36,7 +36,11 @@ dynamiclists git@github.com:sheadawson/silverstripe-dynamiclists.git local
 versionedfiles git://github.com/ajshort/silverstripe-versionedfiles.git local
 SortableGridField git://github.com/UndefinedOffset/SortableGridField.git local
 zengallery git@github.com:sheadawson/silverstripe-zengallery.git local
+zen-googleanalytics git@github.com:sheadawson/silverstripe-zen-googleanalytics.git local
 listingpage git://github.com/nyeholt/silverstripe-listingpage.git
+
+#newsletter git://github.com/sheadawson/silverstripe-newsletter.git local
+#pdfrendition git://github.com/nyeholt/silverstripe-pdfrendition.git
 
 # securefiles http://svn.polemic.net.nz/silverstripe/modules/SecureFiles/tags/0.30/
 # versionedfiles:master:c3bd2ca1710a8241b99a git://github.com/ajshort/silverstripe-versionedfiles.git
@@ -48,7 +52,7 @@ listingpage git://github.com/nyeholt/silverstripe-listingpage.git
 # silverstripe-connector git://github.com/nyeholt/silverstripe-connector.git
 # rssconnector git://github.com/ajshort/silverstripe-rssconnector.git
 
-# pdfrendition git://github.com/nyeholt/silverstripe-pdfrendition.git
+
 # frontend-editing git://github.com/nyeholt/silverstripe-frontend-editing.git
 # linkmapping git://github.com/ajshort/silverstripe-linkmapping.git
 # itemsetfield:master:d8be3cd08e82730d1cfa git://github.com/ajshort/silverstripe-itemsetfield.git

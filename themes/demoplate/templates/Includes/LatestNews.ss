@@ -5,7 +5,7 @@
 <% control LatestNews(5) %>
 	<li>
 		<% if First %>
-			<a class="img-box" href='$Link'>$Thumbnail.SetWidth(222)</a>
+			<figure class='framed'><a href='$Link'>$Thumbnail.CroppedImage(212, 153)</a></figure>
 			<div class='home-col-summary'>
 				<h5><a href="$Link">$Title</a></h5>
 				$Summary.LimitCharacters(100)
