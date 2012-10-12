@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Rename this project to something relevant! -->
-<project name="rename-me" default="build">
+<project name="council-demo-ss3" default="build">
 
 	<tstamp>
 		<format property="FULLDTIME" pattern="%Y%m%d%H%M%S" />
@@ -338,6 +338,7 @@ Deny from all
 	<target name="ci_test" depends="build">
 		<!-- lets get rid of files that we don't want tested -->
 		<delete file="${project.basedir}/framework/tests/WebserverRoutingTest.php" />
+		<delete file="${project.basedir}/framework/tests/travis/_config.php" />
 		<phingcall target="test" />
 	</target>
 
