@@ -32,11 +32,11 @@ news git://github.com/nyeholt/silverstripe-news.git local
 userforms git://github.com/silverstripe/silverstripe-userforms.git local
 multivaluefield git://github.com/nyeholt/silverstripe-multivaluefield.git local
 solr:ss3 git://github.com/sheadawson/silverstripe-solr.git local
-dynamiclists git@github.com:sheadawson/silverstripe-dynamiclists.git local
+dynamiclists git://github.com/sheadawson/silverstripe-dynamiclists.git local
 versionedfiles git://github.com/ajshort/silverstripe-versionedfiles.git local
 SortableGridField git://github.com/UndefinedOffset/SortableGridField.git local
-zengallery git@github.com:sheadawson/silverstripe-zengallery.git local
-zen-googleanalytics git@github.com:sheadawson/silverstripe-zen-googleanalytics.git local
+zen-gallery git://github.com/sheadawson/silverstripe-zengallery.git local
+zen-googleanalytics git://github.com/sheadawson/silverstripe-zen-googleanalytics.git local
 listingpage git://github.com/nyeholt/silverstripe-listingpage.git
 
 #newsletter git://github.com/sheadawson/silverstripe-newsletter.git local
@@ -57,8 +57,8 @@ listingpage git://github.com/nyeholt/silverstripe-listingpage.git
 # linkmapping git://github.com/ajshort/silverstripe-linkmapping.git
 # itemsetfield:master:d8be3cd08e82730d1cfa git://github.com/ajshort/silverstripe-itemsetfield.git
 # multiform:master:61a2df4430a6c0e886c1 git://github.com/silverstripe/silverstripe-multiform.git
-# eventmanagement git@github.com:ajshort/silverstripe-eventmanagement.git 
-# eventresources git@github.com:ajshort/silverstripe-eventresources.git 
-# eventlocations git@github.com:ajshort/silverstripe-eventlocations.git 
-# eventpdftickets git@github.com:ajshort/silverstripe-eventpdftickets.git 
-# fullcalendar git@github.com:ajshort/silverstripe-fullcalendar.git 
+# eventmanagement git@github/ajshort/silverstripe-eventmanagement.git 
+# eventresources git@github/ajshort/silverstripe-eventresources.git 
+# eventlocations git@github/ajshort/silverstripe-eventlocations.git 
+# eventpdftickets git@github/ajshort/silverstripe-eventpdftickets.git 
+# fullcalendar git@github/ajshort/silverstripe-fullcalendar.git 
