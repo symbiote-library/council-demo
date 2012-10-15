@@ -1,0 +1,9 @@
+<IfModule xsendfile_module>
+XSendFile on 
+</IfModule>
+RemoveHandler .php .phtml .php3 .php4 .php5 .inc 
+RemoveType .php .phtml .php3 .php4 .php5 .inc 
+RewriteEngine On
+RewriteBase /silverstripe/demo/council
+RewriteCond %{REQUEST_URI} ^(.*)$
+RewriteRule (.*) sapphire/main.php?url=%1&%{QUERY_STRING} [L]

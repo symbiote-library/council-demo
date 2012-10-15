@@ -1,4 +1,4 @@
-<% include FrontendEditingControls %>
+<%-- include FrontendEditingControls --%>
 
 <section id="content">
   	<div class="top">
@@ -8,8 +8,8 @@
 					<% include Sidebar %> 
 				</div>         		
         		<div class="grid9">
-          			<h1>$EditableField(Title)</h1>
-            		$EditableField(Content)
+          			<h1>$Title</h1>
+            		$Content
             		$Form
 				</div>
 			</div>

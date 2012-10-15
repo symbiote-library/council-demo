@@ -45,3 +45,4 @@ Zend_Date::setOptions(array('cache' => $coreCache));
 
 ZenGoogleAnalytics::$ga_id = "UA-35504764-1";
 
+Director::addRules(100, array('rss' => 'RSS_Controller'));

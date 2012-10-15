@@ -1,5 +1,5 @@
 <div id='latestNews'>
-<a href='rss' title='Subscribe to News RSS feed' name='rss' class='iconic rss'></a>
+<a href='rss/news' title='Subscribe to News RSS feed' name='rss' class='iconic rss'></a>
 <h3 class='boxTitle'><a href='news'>Latest News</a></h3>
 <ul>
 <% control LatestNews(5) %>

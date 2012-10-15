@@ -1,5 +1,5 @@
 <div id='latestEvents'>
-<a href='events/rss' title='Subscribe to Event RSS feed' name='rss' class='iconic rss'></a>
+<a href='rss/events' title='Subscribe to Event RSS feed' name='rss' class='iconic rss'></a>
 <h3 class='boxTitle'><a href='events'>Upcoming Events</a></h3>
 <ul>
 <% loop UpcomingEvents(5) %>

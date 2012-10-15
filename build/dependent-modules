@@ -31,7 +31,7 @@ queuedjobs git://github.com/nyeholt/silverstripe-queuedjobs.git local
 news git://github.com/nyeholt/silverstripe-news.git local
 userforms git://github.com/silverstripe/silverstripe-userforms.git local
 multivaluefield git://github.com/nyeholt/silverstripe-multivaluefield.git local
-solr:ss3 git://github.com/sheadawson/silverstripe-solr.git local
+#solr:ss3 git://github.com/sheadawson/silverstripe-solr.git local
 dynamiclists git://github.com/sheadawson/silverstripe-dynamiclists.git local
 versionedfiles git://github.com/ajshort/silverstripe-versionedfiles.git local
 SortableGridField git://github.com/UndefinedOffset/SortableGridField.git local

@@ -48,5 +48,19 @@ $(function(){
 			$(this).val('');
 		}
 	})
+
+	// jreject - prompts user to upgrade browser if less than ie8 
+ 	$.reject({
+      	reject : {  
+          	msie5: true, 
+          	msie6: true,
+          	msie7: true,
+          	msie8: false,
+          	msie9: false
+      	},
+     	imagePath : 'mysite/thirdparty/jreject/images/',
+      	closeCookie: true 
+    });
+
 	
 });
