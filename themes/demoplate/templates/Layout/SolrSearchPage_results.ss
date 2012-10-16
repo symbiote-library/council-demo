@@ -42,9 +42,10 @@
 						</form>
 					</div>
 
-					
+				
 
 					<% if Results %>
+
 					    <ul id="SearchResults">
 					      <% control Results %>
 					        <li>
