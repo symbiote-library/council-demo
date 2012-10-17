@@ -6,7 +6,7 @@
 	<li>
 		<% if First %>
 			<% with Event %>
-				<figure class='framed'><a href='$Link'>$EventImage.CroppedImage(212, 153)</a></figure>
+				<figure class='framed'><a href='$Up.Link'>$EventImage.CroppedImage(212, 153)</a></figure>
 				<div class='home-col-summary'>
 					<h5><a href="$Up.Link">$Title</a></h5>
 					$Content.LimitCharacters(100)
