@@ -45,7 +45,7 @@ As with all DB fields
 
 ## Maintainer Contacts
 
-* Marcus Nyeholt <marcus@silverstripe.com.au>
+* Marcus Nyeholt <marcus@symbiote.com.au>
 
 ## Requirements
 

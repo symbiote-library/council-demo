@@ -7,7 +7,7 @@
  * it does allow template authors to pass through raw SQL - SS templates are still a
  * little too naive in that regard :/
  *
- * @author marcus@silverstripe.com.au
+ * @author marcus@symbiote.com.au
  * @license BSD License http://silverstripe.org/bsd-license/
  */
 class SortableChildrenExtension extends DataObjectDecorator {

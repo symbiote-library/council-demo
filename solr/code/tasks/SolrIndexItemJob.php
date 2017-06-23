@@ -3,7 +3,7 @@
 /**
  * A job for indexing a piece of content as a background task
  *
- * @author marcus@silverstripe.com.au
+ * @author marcus@symbiote.com.au
  * @license BSD License http://silverstripe.org/bsd-license/
  */
 if (class_exists('AbstractQueuedJob')) {

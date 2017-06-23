@@ -3,7 +3,7 @@
 /**
  * Reindex the entire content of the current system in the solr backend
  *
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  * @license http://silverstripe.org/bsd-license/
  */
 class SolrReindexTask extends BuildTask

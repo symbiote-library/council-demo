@@ -1,8 +1,8 @@
 /.htaccess
 jsparty/
 nbproject/
-ssautesting/logs/
-ssautesting/testing.conf.php
+silverstripe-test-assist/logs/
+silverstripe-test-assist/testing.conf.php
 mysite/*.conf.php
 mysite/_config/local.yml
 mysite/BUILD_NUMBER

@@ -1,7 +1,7 @@
 <?php
 /*
 
-Copyright (c) 2009, SilverStripe Australia PTY LTD - www.silverstripe.com.au
+Copyright (c) 2009, Symbiote PTY LTD - www.symbiote.com.au
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -26,7 +26,7 @@ OF SUCH DAMAGE.
  * Relies on the DynamicList module for selecting which dynamic lists it is dependent
  * upon. 
  *
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  */
 class EditableDependentDynamicListField extends EditableDropdown {
     static $singular_name = 'Dependent Dynamic List field';

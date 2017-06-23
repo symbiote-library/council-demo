@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Shea Dawson <shea@silverstripe.com.au>, Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Shea Dawson <shea@symbiote.com.au>, Marcus Nyeholt <marcus@symbiote.com.au>
  * @license BSD http://silverstripe.org/BSD-license
  */
 class ZenGalleryPage extends Page {

@@ -2,7 +2,7 @@
 /**
  * A page that can be configured to create listings of other content
  *
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  * @license BSD License http://silverstripe.org/bsd-license/
  */
 class ListingPage extends Page {

@@ -5,7 +5,7 @@
  * test runner that outputs appropriate XML files that can be used 
  * in a CI tool like hudson or CruiseControl
  * 
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  *
  */
 class ParameterisedDevelopmentController extends DevelopmentAdmin

@@ -3,7 +3,7 @@
 /**
  * Frontend file create extension used to allow file uploads to be created from the frontend. 
  * 
- * @author marcus@silverstripe.com.au
+ * @author marcus@symbiote.com.au
  * @license BSD License http://silverstripe.org/bsd-license/
  */
 class FrontendFileCreatable extends DataExtension {

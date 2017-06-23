@@ -4,7 +4,7 @@
  * A Solr result set that provides access to results of a solr query, either as
  * a data object set, or as more specific solr items
  *
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  * @license http://silverstripe.org/bsd-license/
  */
 class SolrResultSet

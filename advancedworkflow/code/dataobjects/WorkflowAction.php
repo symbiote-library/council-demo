@@ -4,7 +4,7 @@
  * the action(s) that occur while in that state. An action can then have
  * subsequent transitions out of the current state. 
  *
- * @author  marcus@silverstripe.com.au
+ * @author  marcus@symbiote.com.au
  * @license BSD License (http://silverstripe.org/bsd-license/)
  * @package advancedworkflow
  */

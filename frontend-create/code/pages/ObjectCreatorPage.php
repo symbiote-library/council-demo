@@ -4,7 +4,7 @@
  * A page type that lets users create other data objects from the frontend of 
  * their website. 
  *
- * @author marcus@silverstripe.com.au
+ * @author marcus@symbiote.com.au
  * @license BSD License http://silverstripe.org/bsd-license/
  */
 class ObjectCreatorPage extends Page {

@@ -3,7 +3,7 @@
 /**
  * Controller for backend management of solr search configs
  *
- * @author marcus@silverstripe.com.au
+ * @author marcus@symbiote.com.au
  * @license BSD License http://silverstripe.org/bsd-license/
  */
 class SolrAdminController extends ModelAdmin {

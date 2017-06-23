@@ -3,7 +3,7 @@
 /**
  * A decorator that adds the ability to index a DataObject in Solr
  * 
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  * @license http://silverstripe.org/bsd-license/
  *
  */

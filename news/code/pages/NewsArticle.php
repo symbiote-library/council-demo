@@ -3,7 +3,7 @@
 /**
  * A news article in the system
  *
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  * @license BSD License http://silverstripe.org/bsd-license/
  */
 class NewsArticle extends Page {

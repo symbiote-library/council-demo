@@ -2,7 +2,7 @@
 /**
  * Provides a front end Form view of the defined Workflow Actions and Transitions 
  *
- * @author  rodney@silverstripe.com.au shea@silverstripe.com.au
+ * @author  rodney@symbiote.com.au shea@symbiote.com.au
  * @license BSD License (http://silverstripe.org/bsd-license/)
  * @package advancedworkflow
  */

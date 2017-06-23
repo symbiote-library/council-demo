@@ -3,7 +3,7 @@
 /**
  * A test runnner that accepts several parameters for setting things
  * like the test reporter to use, the 
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  *
  */
 class ParameterisedTestRunner extends TestRunner

@@ -9,7 +9,7 @@
  * Therefore, any logic around whether the workflow can proceed should be
  * managed within this method. 
  *
- * @author  marcus@silverstripe.com.au
+ * @author  marcus@symbiote.com.au
  * @license BSD License (http://silverstripe.org/bsd-license/)
  * @package advancedworkflow
  */

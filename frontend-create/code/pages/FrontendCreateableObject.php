@@ -9,7 +9,7 @@
  * fields are displayed when creating an item of this type. 
  * 
  *
- * @author marcus@silverstripe.com.au
+ * @author marcus@symbiote.com.au
  * @license BSD License http://silverstripe.org/bsd-license/
  */
 interface FrontendCreateableObject {

@@ -5,7 +5,7 @@
  * Set up all the customisable settings and integrations for the website.
  *	
  * @package    mysite
- * @author     Shea Dawson <shea@silverstripe.com.au>
+ * @author     Shea Dawson <shea@symbiote.com.au>
  */
 class CustomSiteConfig extends DataExtension {
        

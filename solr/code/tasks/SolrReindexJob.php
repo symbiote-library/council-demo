@@ -4,7 +4,7 @@
  * A queued job used for reindexing content
  *
  *
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  * @license http://silverstripe.org/bsd-license/
  */
 if (class_exists('AbstractQueuedJob')) {

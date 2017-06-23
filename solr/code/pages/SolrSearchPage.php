@@ -7,7 +7,7 @@
  * retrieve the SolrSearchPage to use as its context.
  * 
  *
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  * @license http://silverstripe.org/bsd-license/
  */
 class SolrSearchPage extends Page {

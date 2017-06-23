@@ -2121,7 +2121,7 @@ CREATE TABLE `Member` (
 --
 
 INSERT INTO `Member` VALUES(1, 'Member', '2011-12-15 04:04:19', '2012-10-11 14:12:18', 'Shea', 'Dawson', 'shea@livesource.co.nz', 'ec8ab46c2462a29409db02c4aa1c075d5b86a98f', NULL, 26, '2012-10-11 15:29:11', 0, NULL, '2012-02-15 00:00:00', 'sha1_v2.4', '8469396c4266336af38c2e44f4bdf3e98d8e64fa', NULL, NULL, 'en_US', 0, 'MM/dd/yyyy', 'hh:mm a', NULL, 0, 'a:3:{i:0;b:0;i:1;s:9:"FirstName";i:2;s:9:"FirstName";}', 0, 0, 0, 'fb9a8a9416df4de20fdb7bfb401c2398', 0, NULL, 0, 1);
-INSERT INTO `Member` VALUES(2, 'Member', '2011-12-15 15:09:49', '2012-10-10 10:43:03', 'Jerry', 'James', 'shea+jerry@silverstripe.com.au', 'e960ff3a4b19986bd16c859b9df1b82b105f2588', NULL, 3, '2012-10-10 10:43:03', 0, NULL, NULL, 'sha1_v2.4', '598532398da7a872b4ab7a774111744d6055b5d0', NULL, NULL, 'en_US', 0, NULL, NULL, '10df9b846d6497ecc1844be847836b65435815c2', 0, NULL, 0, 0, 0, NULL, 0, NULL, 0, 0);
+INSERT INTO `Member` VALUES(2, 'Member', '2011-12-15 15:09:49', '2012-10-10 10:43:03', 'Jerry', 'James', 'shea+jerry@symbiote.com.au', 'e960ff3a4b19986bd16c859b9df1b82b105f2588', NULL, 3, '2012-10-10 10:43:03', 0, NULL, NULL, 'sha1_v2.4', '598532398da7a872b4ab7a774111744d6055b5d0', NULL, NULL, 'en_US', 0, NULL, NULL, '10df9b846d6497ecc1844be847836b65435815c2', 0, NULL, 0, 0, 0, NULL, 0, NULL, 0, 0);
 INSERT INTO `Member` VALUES(3, 'Member', '2011-12-19 11:55:00', '2011-12-21 09:59:05', 'Registered', 'User', 'shea+3@livesource.co.nz', '8b9b87185101c5164a59495e66ec98229c2aedbe', NULL, 2, '2011-12-21 09:59:05', 0, NULL, NULL, 'sha1_v2.4', 'fa2cfb5e208092dd4d0461d6d152699fef010f1e', NULL, NULL, 'en_US', 0, NULL, NULL, 'd3fd88b183527cf56903405edcc0c8983f92a815', 0, 'a:3:{i:0;b:0;i:1;s:9:FirstName;i:2;s:7:Surname;}', 0, 13, 0, NULL, 0, NULL, 0, 0);
 INSERT INTO `Member` VALUES(4, 'Member', '2012-02-17 14:18:19', '2012-10-15 11:12:44', 'Admin', NULL, 'admin', '71315de00efcb617c63c7f37f45586d2d5838efc', NULL, 30, '2012-10-15 13:24:52', 0, NULL, NULL, 'sha1_v2.4', 'bc425911db3e002ecee563978fba162e33ccc540', NULL, NULL, 'en_US', 0, 'MMM d, y', 'h:mm:ss a', '3313c3307a7634b531346bfaf1545784d323faec', 0, NULL, 0, 0, 0, '2c69bfbe7389a1edac84376b0af23bf4', 0, '82efae65d49982de1f937a9acd833972', 0, 1);
 
@@ -3049,7 +3049,7 @@ CREATE TABLE `NotifyUsersWorkflowAction` (
 -- Dumping data for table `NotifyUsersWorkflowAction`
 --
 
-INSERT INTO `NotifyUsersWorkflowAction` VALUES(2, 'New content approval request', 'shea@silverstripe.com.au', '<p>Hello, a new item has been submitted for publishing.</p>\n\n<p>\nTitle: $Context.Title<br />\nAuthor: $Member.Name<br />\nAuthor Email: $Member.Email<br />\n</p>\n\nYou can view, reject or approve this submission <a href=''$Context.CMSEditLink''>here</a>.', 0);
+INSERT INTO `NotifyUsersWorkflowAction` VALUES(2, 'New content approval request', 'shea@symbiote.com.au', '<p>Hello, a new item has been submitted for publishing.</p>\n\n<p>\nTitle: $Context.Title<br />\nAuthor: $Member.Name<br />\nAuthor Email: $Member.Email<br />\n</p>\n\nYou can view, reject or approve this submission <a href=''$Context.CMSEditLink''>here</a>.', 0);
 INSERT INTO `NotifyUsersWorkflowAction` VALUES(5, 'Approval Rejected', 'shea@livesource.co.nz', '<p>This is an automated email from Demoville Council. Approval for the following item has been declined.</p>\n<p>\nItem: $Context.Title<br />\nSubmitted by: $Member.Name<br />\n</p>', 0);
 INSERT INTO `NotifyUsersWorkflowAction` VALUES(6, 'Approval Accepted', 'shea@livesource.co.nz', '<p>This is an automated email from Demoville Council. The submission of the following item has been approved and published.</p>\n<p>\nItem: $Context.Title<br />\nSubmitted by: $Member.Name<br />\n</p>', 0);
 
@@ -4876,7 +4876,7 @@ INSERT INTO `SubmittedFormField` VALUES(4, 'SubmittedFormField', '2012-02-06 13:
 INSERT INTO `SubmittedFormField` VALUES(5, 'SubmittedFormField', '2012-02-06 13:09:57', '2012-02-06 13:09:57', 'EditableRadioField9', 'Not sufficient', 'How do you feel about Demoville''s cycle lanes and paths', 1);
 INSERT INTO `SubmittedFormField` VALUES(6, 'SubmittedFormField', '2012-02-06 13:09:57', '2012-02-06 13:09:57', 'EditableTextField10', 'Test', 'Comments', 1);
 INSERT INTO `SubmittedFormField` VALUES(7, 'SubmittedFormField', '2012-10-10 15:24:32', '2012-10-10 15:24:32', 'EditableTextField11', 'Shea', 'Name', 2);
-INSERT INTO `SubmittedFormField` VALUES(8, 'SubmittedFormField', '2012-10-10 15:24:32', '2012-10-10 15:24:32', 'EditableEmailField12', 'shea@silverstripe.com.au', 'Email', 2);
+INSERT INTO `SubmittedFormField` VALUES(8, 'SubmittedFormField', '2012-10-10 15:24:32', '2012-10-10 15:24:32', 'EditableEmailField12', 'shea@symbiote.com.au', 'Email', 2);
 INSERT INTO `SubmittedFormField` VALUES(9, 'SubmittedFormField', '2012-10-10 15:24:32', '2012-10-10 15:24:32', 'EditableDropdown13', 'Every day', 'How often do you bike?', 2);
 INSERT INTO `SubmittedFormField` VALUES(10, 'SubmittedFormField', '2012-10-10 15:24:32', '2012-10-10 15:24:32', 'EditableCheckboxGroupField14', 'Commuting, Leisure, Training', 'Why do you ride?', 2);
 INSERT INTO `SubmittedFormField` VALUES(11, 'SubmittedFormField', '2012-10-10 15:24:32', '2012-10-10 15:24:32', 'EditableRadioField15', 'Very good', 'How do you feel about Demoville''s cycle lanes and paths', 2);
@@ -5797,16 +5797,16 @@ CREATE TABLE `_obsolete_Page` (
 INSERT INTO `_obsolete_Page` VALUES(1, 0, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page` VALUES(2, 1, 1, 0, 1, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page` VALUES(3, 0, 0, 0, 0, 0, NULL, NULL);
-INSERT INTO `_obsolete_Page` VALUES(10, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page` VALUES(11, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page` VALUES(12, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@silverstripe.com.au');
+INSERT INTO `_obsolete_Page` VALUES(10, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page` VALUES(11, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page` VALUES(12, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@symbiote.com.au');
 INSERT INTO `_obsolete_Page` VALUES(13, 0, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page` VALUES(14, 0, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page` VALUES(15, 0, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page` VALUES(17, 1, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page` VALUES(18, 1, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page` VALUES(19, 1, 0, 0, 0, 0, NULL, NULL);
-INSERT INTO `_obsolete_Page` VALUES(20, 0, 0, 0, 0, 0, '2012-07-31 17:39:17', 'admin@silverstripe.com.au');
+INSERT INTO `_obsolete_Page` VALUES(20, 0, 0, 0, 0, 0, '2012-07-31 17:39:17', 'admin@symbiote.com.au');
 INSERT INTO `_obsolete_Page` VALUES(21, 1, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page` VALUES(22, 1, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page` VALUES(23, 1, 0, 0, 0, 0, NULL, NULL);
@@ -5856,16 +5856,16 @@ CREATE TABLE `_obsolete_Page_Live` (
 INSERT INTO `_obsolete_Page_Live` VALUES(1, 0, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page_Live` VALUES(2, 1, 1, 0, 1, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page_Live` VALUES(3, 0, 0, 0, 0, 0, NULL, NULL);
-INSERT INTO `_obsolete_Page_Live` VALUES(10, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_Live` VALUES(11, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_Live` VALUES(12, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@silverstripe.com.au');
+INSERT INTO `_obsolete_Page_Live` VALUES(10, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_Live` VALUES(11, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_Live` VALUES(12, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@symbiote.com.au');
 INSERT INTO `_obsolete_Page_Live` VALUES(13, 0, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page_Live` VALUES(14, 0, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page_Live` VALUES(15, 0, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page_Live` VALUES(17, 1, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page_Live` VALUES(18, 1, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page_Live` VALUES(19, 1, 0, 0, 0, 0, NULL, NULL);
-INSERT INTO `_obsolete_Page_Live` VALUES(20, 0, 0, 0, 0, 0, '2012-07-31 17:39:17', 'admin@silverstripe.com.au');
+INSERT INTO `_obsolete_Page_Live` VALUES(20, 0, 0, 0, 0, 0, '2012-07-31 17:39:17', 'admin@symbiote.com.au');
 INSERT INTO `_obsolete_Page_Live` VALUES(21, 1, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page_Live` VALUES(22, 1, 0, 0, 0, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page_Live` VALUES(23, 1, 0, 0, 0, 0, NULL, NULL);
@@ -6103,26 +6103,26 @@ INSERT INTO `_obsolete_Page_versions` VALUES(187, 61, 1, 0, 1, 0, 1, 0, NULL, NU
 INSERT INTO `_obsolete_Page_versions` VALUES(188, 62, 1, 0, 1, 0, 1, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page_versions` VALUES(189, 63, 1, 0, 1, 0, 1, 0, NULL, NULL);
 INSERT INTO `_obsolete_Page_versions` VALUES(190, 64, 1, 0, 1, 0, 1, 0, NULL, NULL);
-INSERT INTO `_obsolete_Page_versions` VALUES(191, 20, 5, 0, 0, 0, 0, 0, '2012-07-31 17:36:23', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(192, 12, 2, 0, 0, 0, 0, 0, '2012-07-31 17:36:23', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(193, 11, 2, 0, 0, 0, 0, 0, '2012-07-31 17:36:23', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(194, 10, 4, 0, 0, 0, 0, 0, '2012-07-31 17:36:23', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(195, 10, 5, 0, 0, 0, 0, 0, '2012-07-31 17:36:24', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(196, 20, 6, 0, 0, 0, 0, 0, '2012-07-31 17:36:39', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(197, 12, 3, 0, 0, 0, 0, 0, '2012-07-31 17:36:39', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(198, 12, 4, 0, 0, 0, 0, 0, '2012-07-31 17:36:40', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(199, 11, 3, 0, 0, 0, 0, 0, '2012-07-31 17:36:40', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(200, 10, 6, 0, 0, 0, 0, 0, '2012-07-31 17:36:40', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(201, 20, 7, 0, 0, 0, 0, 0, '2012-07-31 17:37:28', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(202, 12, 5, 0, 0, 0, 0, 0, '2012-07-31 17:37:28', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(203, 11, 4, 0, 0, 0, 0, 0, '2012-07-31 17:37:28', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(204, 10, 7, 0, 0, 0, 0, 0, '2012-07-31 17:37:28', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(205, 20, 8, 0, 0, 0, 0, 0, '2012-07-31 17:37:28', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(206, 20, 9, 0, 0, 0, 0, 0, '2012-07-31 17:38:03', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(207, 12, 6, 0, 0, 0, 0, 0, '2012-07-31 17:38:03', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(208, 12, 7, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(209, 11, 5, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(210, 10, 8, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(211, 12, 8, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(212, 20, 10, 0, 0, 0, 0, 0, '2012-07-31 17:39:17', 'admin@silverstripe.com.au');
-INSERT INTO `_obsolete_Page_versions` VALUES(213, 20, 11, 0, 0, 0, 0, 0, '2012-07-31 17:39:17', 'admin@silverstripe.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(191, 20, 5, 0, 0, 0, 0, 0, '2012-07-31 17:36:23', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(192, 12, 2, 0, 0, 0, 0, 0, '2012-07-31 17:36:23', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(193, 11, 2, 0, 0, 0, 0, 0, '2012-07-31 17:36:23', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(194, 10, 4, 0, 0, 0, 0, 0, '2012-07-31 17:36:23', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(195, 10, 5, 0, 0, 0, 0, 0, '2012-07-31 17:36:24', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(196, 20, 6, 0, 0, 0, 0, 0, '2012-07-31 17:36:39', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(197, 12, 3, 0, 0, 0, 0, 0, '2012-07-31 17:36:39', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(198, 12, 4, 0, 0, 0, 0, 0, '2012-07-31 17:36:40', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(199, 11, 3, 0, 0, 0, 0, 0, '2012-07-31 17:36:40', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(200, 10, 6, 0, 0, 0, 0, 0, '2012-07-31 17:36:40', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(201, 20, 7, 0, 0, 0, 0, 0, '2012-07-31 17:37:28', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(202, 12, 5, 0, 0, 0, 0, 0, '2012-07-31 17:37:28', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(203, 11, 4, 0, 0, 0, 0, 0, '2012-07-31 17:37:28', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(204, 10, 7, 0, 0, 0, 0, 0, '2012-07-31 17:37:28', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(205, 20, 8, 0, 0, 0, 0, 0, '2012-07-31 17:37:28', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(206, 20, 9, 0, 0, 0, 0, 0, '2012-07-31 17:38:03', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(207, 12, 6, 0, 0, 0, 0, 0, '2012-07-31 17:38:03', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(208, 12, 7, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(209, 11, 5, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(210, 10, 8, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(211, 12, 8, 0, 0, 0, 0, 0, '2012-07-31 17:38:04', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(212, 20, 10, 0, 0, 0, 0, 0, '2012-07-31 17:39:17', 'admin@symbiote.com.au');
+INSERT INTO `_obsolete_Page_versions` VALUES(213, 20, 11, 0, 0, 0, 0, 0, '2012-07-31 17:39:17', 'admin@symbiote.com.au');

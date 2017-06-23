@@ -23,7 +23,7 @@ sqlite3 git://github.com/silverstripe-labs/silverstripe-sqlite3.git local
 cms:master:3.0.2 git://github.com/silverstripe/silverstripe-cms.git local
 framework:master:3.0.2 git://github.com/silverstripe/sapphire.git local
 dashboard git://github.com/unclecheese/silverstripe-dashboard.git local
-advancedworkflow git://github.com/silverstripe-australia/advancedworkflow.git local
+advancedworkflow git://github.com/symbiote/advancedworkflow.git local
 addressable git://github.com/ajshort/silverstripe-addressable.git local
 event_calendar git://github.com/unclecheese/EventCalendar.git local
 memberprofiles:development git://github.com/ajshort/silverstripe-memberprofiles.git local 

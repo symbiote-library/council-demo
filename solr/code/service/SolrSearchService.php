@@ -3,7 +3,7 @@
 /**
  * A search service built around Solr
  * 
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  * @license http://silverstripe.org/bsd-license/
  */
 class SolrSearchService {
@@ -711,7 +711,7 @@ class SolrSearchService {
 /**
  * Class that defines how fields should be mapped to Solr properties
  * 
- * @author Marcus Nyeholt <marcus@silverstripe.com.au>
+ * @author Marcus Nyeholt <marcus@symbiote.com.au>
  */
 class SolrSchemaMapper {
 

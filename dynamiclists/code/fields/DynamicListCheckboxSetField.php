@@ -1,7 +1,7 @@
 <?php
 /*
  * A CheckboxSetField field that takes its inputs from a DynamicList
- * @author Shea Dawson <shea@silverstripe.com.au>
+ * @author Shea Dawson <shea@symbiote.com.au>
  */
 class DynamicListCheckboxSetField extends CheckboxSetField {
     function __construct($name, $title = null, $source = null, $value = "", $form = null, $emptyString = null) {

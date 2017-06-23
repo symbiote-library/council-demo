@@ -4,7 +4,7 @@
  * A controller extension that provides additional methods on page controllers
  * to allow for better searching using Solr
  *
- * @author marcus@silverstripe.com.au
+ * @author marcus@symbiote.com.au
  * @license http://silverstripe.org/bsd-license/
  */
 class SolrSearchExtension extends Extension {

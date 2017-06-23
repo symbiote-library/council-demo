@@ -6,7 +6,7 @@ for automatic geocoding.
 
 Maintainer Contact
 ------------------
-*  Andrew Short (<andrew@silverstripe.com.au>)
+*  Andrew Short (<andrew@symbiote.com.au>)
 
 Requirements
 ------------

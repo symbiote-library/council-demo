@@ -23,4 +23,4 @@ Then place the template include in your themes Page.ss
 Maintainer Contact
 ------------
 
-Shea@silverstripe.com.au
+Shea@symbiote.com.au
